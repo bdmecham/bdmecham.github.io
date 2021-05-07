@@ -1,0 +1,36 @@
+/* Bryce Mecham May 2021 */
+body{
+    background-color: #433A3F;
+    color: #FFEDDF;
+}
+header{
+    font-size: 2em;
+    text-align: center;
+}
+
+nav{
+    overflow: hidden;
+    background-color: #3D5A6C;
+    padding: 1% 0% 1% 0%;
+    font-size: 1.2em;
+}
+nav a{
+    text-decoration: none;
+    color: #FFEDDF;
+    padding: 2%;
+}
+
+nav a:hover{
+   background-color: #334C5B;
+}
+
+main{
+    font-size: 1.13em;
+    max-width: 70%;
+    text-align: left;
+}
+
+.active{
+    background-color: #496D83;
+    pointer-events: none;
+}
