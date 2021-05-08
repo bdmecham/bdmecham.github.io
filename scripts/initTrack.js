@@ -108,6 +108,45 @@ function sort() {
 }
 
 // Advance Round Counter
+
+/*This gets the round number and checks if its zero. if so it starts the initiative, if not it goes through and finds who's active, and then makes the next person in line active. If it is the end of the round it advances the counter and starts over.*/
+function start(){
+    var currentlyActive, round, count, list, b;
+    round = document.getElementById("counter").innerHTML;
+    count = parseInt(round.replace("Round: ", ""));
+    if(count === 0){
+        list = document.getElementById("init-list");
+        b = list.getElementsByClassName("person-card");
+        b[0].setAttribute("id","active-card");
+        count++;
+        document.getElementById("counter").innerHTML = "Round: " + count;
+    }
+    else{
+        list = document.getElementById("init-list");
+        b = list.getElementsByClassName("person-card");
+        for (var i = 0; i < (b.length); i++) {
+            if(b[i].id == "active-card"){
+                currentlyActive = i;
+            }
+        }
+        if (currentlyActive === b.length-1){
+            b[currentlyActive].removeAttribute("id");
+            b[0].setAttribute("id","active-card");
+            count++;
+            document.getElementById("counter").innerHTML = "Round: " + count;
+        }
+        else{
+            b[currentlyActive].removeAttribute("id");
+            b[currentlyActive+1].setAttribute("id","active-card");
+        }
+        
+    }
+    
+    
+}
+
+
+
 function nextRound() {
   var round = document.getElementById("counter").innerHTML;
   var count = parseInt(round.replace("Round: ", ""));

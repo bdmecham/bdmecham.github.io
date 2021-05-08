@@ -6,6 +6,9 @@ vlighter color: #574C50
 #DD614A
 #39A77F
 */
+h1{
+    font-size: 2em;
+}
 body{
     
     text-align: center;
@@ -69,4 +72,8 @@ select{
 .remove-person{
     padding: inherit;
     margin: auto;
+}
+
+#active-card{
+    background-color: #574C50;
 }
