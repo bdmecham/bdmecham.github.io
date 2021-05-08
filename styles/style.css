@@ -1,4 +1,13 @@
 /* Bryce Mecham May 2021 */
+/* 
+#433A3F
+vlighter color: #496D83
+#3D5A6C
+^darker color: #334C5B
+#72A98F
+#FC7753
+#FFEDDF   
+*/
 body{
     background-color: #433A3F;
     color: #FFEDDF;
@@ -26,11 +35,15 @@ nav a:hover{
 
 main{
     font-size: 1.13em;
-    max-width: 70%;
-    text-align: left;
+    max-width: 80;
+    align-content: center;
 }
 
 .active{
     background-color: #496D83;
     pointer-events: none;
+}
+
+#projects-intro{
+    text-align: center;
 }

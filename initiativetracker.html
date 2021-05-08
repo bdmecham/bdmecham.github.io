@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiative Tracker</title>
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+    <link rel="stylesheet" href="styles/initTrack.css">
+    <script src="scripts/initTrack.js"></script>
+</head>
+<body>
+    <header><h1>Initiative Tracker</h1></header>
+    <main>
+
+        <div>
+            <p>Please enter a name and a initiative roll!</p>
+            <form id="list-input">
+                <input type="text" name="charName" id="list-input-name" placeholder="Name">
+                <input type="number" name="initRoll" id="list-input-number" placeholder="Roll">
+                <input type="button" value="Add" onclick="addCharacter(charName.value,initRoll.value)">
+            </form>
+        </div>
+        
+
+        <div>
+            <p id="counter">Round: 0</p>
+            <button onclick="nextRound()">Next Round</button>
+        </div>
+
+
+        <div>
+            <ul id="init-list">
+            </ul>
+        </div>
+        
+
+        <button onclick="sort()">Sort</button>
+
+
+        <button onclick="clearAll()">Clear All</button>
+    
+    
+    </main>
+    
+</body>
+</html>

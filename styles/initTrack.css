@@ -1,0 +1,52 @@
+body{
+    text-align: center;
+    max-width: 60%;
+    margin: auto;
+}
+
+#init-list{
+    display: inline-block;
+}
+
+ .person-card{
+    padding: inherit;
+    margin: auto;
+    display: inline-flex;
+} 
+
+#init-list li{
+    list-style: none;
+    border: 1px solid black;
+}
+#init-list .roll{
+    padding: initial;
+    margin: auto;
+}
+#init-list .name{
+    padding: inherit;
+    margin: auto;
+}
+
+.conditions{
+    column-count: 2;
+    column-gap: 0;
+    padding: inherit;
+    margin: auto;
+    
+}
+
+#init-list .conditions li{
+    padding: inherit;
+    margin: auto;
+    
+}
+
+select{
+    padding: ini;
+    margin: auto;
+}
+
+.remove-person{
+    padding: inherit;
+    margin: auto;
+}
