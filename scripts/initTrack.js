@@ -120,6 +120,7 @@ function start(){
         b[0].setAttribute("id","active-card");
         count++;
         document.getElementById("counter").innerHTML = "Round: " + count;
+        document.getElementById("start").innerHTML = "Next Player";
     }
     else{
         list = document.getElementById("init-list");
@@ -162,4 +163,5 @@ function clearAll() {
   var count = parseInt(round.replace("Round: ", ""));
   count = 0;
   document.getElementById("counter").innerHTML = "Round: " + count;
+  document.getElementById("start").innerHTML = "Start";
 }
