@@ -11,35 +11,30 @@
 <body>
     <header><h1>Initiative Tracker</h1></header>
     <main>
-
-        <div>
-            <p>Please enter a name and a initiative roll! Note: This works better on tablets and laptops.</p>
+        <p>Please enter a name and a initiative roll! Note: This works better on tablets and laptops.</p>
+        <div id="control-bar">
             <form id="list-input">
                 <input type="text" name="charName" id="list-input-name" placeholder="Name" maxlength="16">
                 <input type="number" name="initRoll" id="list-input-number" placeholder="Roll">
                 <input type="button" value="Add" onclick="addCharacter(charName.value,initRoll.value)">
             </form>
+            <div id="sort">
+                <button onclick="sort()">Sort</button>
+            </div>
+            <div id="clear">
+                <button onclick="clearAll()">Clear All</button>
+            </div>
+            
+            <div id="counter-div">
+                <button onclick="start()">Next Player</button>
+            </div>
+            <div id="counter">Round: 0</div>
         </div>
-        
-
-        <div>
-            <button onclick="start()">Start</button>
-            <span id="counter">Round: 0</span>
-        </div>
-
 
         <div>
             <ul id="init-list">
             </ul>
         </div>
-        
-
-        <button onclick="sort()">Sort</button>
-
-
-        <button onclick="clearAll()">Clear All</button>
-    
-    
     </main>
     
 </body>

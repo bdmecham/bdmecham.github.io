@@ -9,6 +9,7 @@ vlighter color: #574C50
 h1{
     font-size: 2em;
 }
+
 body{
     
     text-align: center;
@@ -19,11 +20,6 @@ body{
     font-size: 1.1em;
 }
 
-input, button {
-    padding: 1%;
-    margin: 1% 0%;
-}
-
 input, button, select{
     background-color: #161314;
     color: #39A77F;
@@ -31,10 +27,12 @@ input, button, select{
 }
 
  .person-card{
-    padding: inherit;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
     margin: auto;
-    display: inline-flex;
-    width: 70%;
+    
 } 
 
 #init-list li{
@@ -42,38 +40,76 @@ input, button, select{
     border: 1px solid black;
 }
 #init-list .roll{
-    padding: inherit;
-    margin: auto;
+    flex: 1;
 }
 #init-list .name{
-    padding: inherit;
-    margin: auto;
+    flex: 1;
 }
 
 .conditions{
-    column-count: 2;
-    column-gap: 0;
-    padding: inherit;
-    margin: auto;
-    
-}
-
-#init-list .conditions li{
-    padding: inherit;
-    margin: auto;
-    
+    flex: 2;
 }
 
 select{
-    padding: inherit;
-    margin: auto;
+    flex: 1;
+    margin-left: 1%;
 }
 
 .remove-person{
-    padding: inherit;
-    margin: auto;
+    flex: 1;
 }
 
 #active-card{
     background-color: #574C50;
+}
+
+#control-bar{
+    position: sticky;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0;
+    background-color: #39A77F;
+}
+
+#list-input{
+    flex: 3;
+    margin: 0;
+}
+
+#list-input input{
+    padding: 3% 2.5%;
+    font-size: 1em;
+}
+
+#sort {
+    flex: 1;
+}
+
+#sort button{
+    padding: 9% 40%;
+    font-size: 1em;
+}
+
+#clear{
+    flex: 1;
+}
+
+#clear button{
+    padding: 9% 30%;
+    font-size: 1em;
+}
+#counter-div{
+    flex: 1;
+}
+#counter-div button{
+    padding: 9% 25%;
+    font-size: 1em;
+}
+#counter{
+    flex: .5;
+    color: white;
+    font-size: 1.5em;
 }

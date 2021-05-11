@@ -4,8 +4,8 @@ function addCharacter(name, num) {
     var newli = document.createElement("li");
     if(name != "" && num != ""){
         newli.className = `person-card`;
-        newli.innerHTML = `<span class="roll" >${num}</span>
-        <span class="name">${name}</span>
+        newli.innerHTML = `<div class="roll" >${num}</div>
+        <div class="name">${name}</div>
         <ul class="conditions">
             <li>
                 <input type="checkbox" name="blinded" id="blinded">
@@ -73,7 +73,7 @@ function addCharacter(name, num) {
             <option value="exhaustion5">Exhaustion 5</option>
             <option value="exhaustion6">Exhaustion 6</option>
         </select>
-        <span class="remove-person">X</span>`;
+        <div class="remove-person">X</div>`;
 
       document.getElementById("init-list").appendChild(newli);
 
