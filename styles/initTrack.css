@@ -47,7 +47,10 @@ input, button, select{
 }
 
 .conditions{
+    text-align: left;
     flex: 2;
+    display: grid;
+    grid-template-columns: 4fr 5fr;
 }
 
 select{
