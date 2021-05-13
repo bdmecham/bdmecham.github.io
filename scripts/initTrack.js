@@ -137,12 +137,15 @@ function start(){
             b[0].setAttribute("id","active-card");
             count++;
             document.getElementById("counter").innerHTML = "Round: " + count;
+            
         }
         else{
             b[currentlyActive].removeAttribute("id");
             b[currentlyActive+1].setAttribute("id","active-card");
+            
         }
-        
+
+        document.getElementById('active-card').scrollIntoView({behavior: "smooth", block: "center"});
     }
     
     
