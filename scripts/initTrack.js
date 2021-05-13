@@ -1,4 +1,4 @@
-
+let removeid = 0;
 // This creates a card this is sortable by the number!
 function addCharacter(name, num) {
     var newli = document.createElement("li");
@@ -73,11 +73,13 @@ function addCharacter(name, num) {
             <option value="exhaustion5">Exhaustion 5</option>
             <option value="exhaustion6">Exhaustion 6</option>
         </select>
-        <div class="remove-person">X</div>`;
+        <button id="remove${removeid}" onClick="removeCard(this.id)">
+        Remove</button>`;
 
       document.getElementById("init-list").appendChild(newli);
 
       document.getElementById("list-input").reset();
+      removeid++;
     }
     
 }
@@ -146,8 +148,6 @@ function start(){
     
 }
 
-
-
 function nextRound() {
   var round = document.getElementById("counter").innerHTML;
   var count = parseInt(round.replace("Round: ", ""));
@@ -155,7 +155,6 @@ function nextRound() {
   document.getElementById("counter").innerHTML = "Round: " + count;
 }
 
-// Clear All
 function clearAll() {
   list = document.getElementById("init-list").innerHTML = "";
 
@@ -164,4 +163,13 @@ function clearAll() {
   count = 0;
   document.getElementById("counter").innerHTML = "Round: " + count;
   document.getElementById("start").innerHTML = "Start";
+  removeid = 0;
+}
+
+function removeCard(id) {
+
+    if(document.getElementById(id).closest('li').id == "active-card"){
+        start();
+    }
+    document.getElementById('init-list').removeChild(document.getElementById(id).closest('li'));
 }
