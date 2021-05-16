@@ -152,13 +152,10 @@ function start(){
         }
         else{
             b[currentlyActive].removeAttribute("id");
-            b[currentlyActive+1].setAttribute("id","active-card");
-            
+            b[currentlyActive+1].setAttribute("id","active-card");   
         }
-
-        document.getElementById('active-card').scrollIntoView({behavior: "smooth", block: "center"});
     }
-    
+    document.getElementById('active-card').scrollIntoView({behavior: "smooth", block: "center"});
     
 }
 

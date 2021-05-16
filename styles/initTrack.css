@@ -41,7 +41,7 @@ body{
     border-top: #57A773 solid;
     border-right: #57A773 solid;
     border-left: #57A773 solid;
-    max-width: 50%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -92,7 +92,7 @@ select{
     border: #57A773 solid;
     position: sticky;
     display: flex;
-    top: 0;
+    bottom: 0;
     left: 0;
     align-items: center;
     justify-content: space-between;
@@ -114,21 +114,21 @@ button{
 
 #list-input-number{
     font-size: 2em;
-    width: 40%;
+    width: 30%;
 }
 
 #list-input-btn{
     font-size: 2em;
-    width: 10%;
+    width: 20%;
 }
 
 #sort {
-    
     flex: 1;
 }
 
 #sort button{
     font-size: 2em;
+    width: 90%;
 }
 
 #clear{
@@ -137,12 +137,14 @@ button{
 
 #clear button{
     font-size: 2em;
+    width: 90%;
 }
 #counter-div{
     flex: 1;
 }
 #counter-div button{
     font-size: 2em;
+    width: 90%;
 }
 #counter{
     font-size: 2em;

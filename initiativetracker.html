@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Initiative Tracker</title>
     <!-- <link rel="stylesheet" href="styles/style.css"> -->
@@ -12,6 +13,12 @@
     <header id="top"><h1>Initiative Tracker</h1></header>
     <main>
         <p>Please enter a name and an initiative roll! Note: This works better on tablets and laptops.</p>
+
+        <div>
+            <ul id="init-list">
+            </ul>
+        </div>
+
         <div id="control-bar">
             <form id="list-input">
                 <input type="text" name="charName" id="list-input-name" placeholder="Name" maxlength="16">
@@ -30,12 +37,7 @@
             </div>
             <div id="counter">Round: 0</div>
         </div>
-
-        <div>
-            <ul id="init-list">
-            </ul>
-        </div>
-
+        
     </main>
     
 </body>
