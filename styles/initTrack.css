@@ -34,6 +34,8 @@ body{
     text-align: center;
     background-color: #383A42;
     color: #DCE1E9;
+    margin: 0;
+    padding: none;
 }
 
 /* Player Cards */
