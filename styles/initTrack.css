@@ -1,98 +1,132 @@
 /* 
 Colors
-vlighter color: #574C50
-#2E282A
-^darker color: #161314
-#DD614A
-#39A77F
+^4B4E58
+383A42
+v 26272C
+
+^EA7E5D
+E4572E
+v D9481C
+
+^D9481C
+457EAC
+v 3A6A92
+
+^FFFFFF
+DCE1E9
+v CDD4E0
+
+^79B990
+57A773
+v 4D9366
 */
 h1{
-    font-size: 2em;
+    font-size: 2.2em;
+}
+
+p{
+    font-size: 1.5em;
 }
 
 body{
-    
     text-align: center;
-    max-width: 80%;
-    margin: auto;
-    background-color: #2E282A;
-    color: #39A77F;
-    font-size: 1.1em;
+    background-color: #383A42;
+    color: #DCE1E9;
 }
 
-input, button, select{
-    background-color: #161314;
-    color: #39A77F;
-    border: none;
-}
 
  .person-card{
+    border-top: #57A773 solid;
+    border-right: #57A773 solid;
+    border-left: #57A773 solid;
+    max-width: 50%;
     display: flex;
-    width: 50%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
-    
-} 
+    font-size: 1.1em;
+    /* cursor: move; */
+}
+
+.person-card:last-child {
+    border-bottom: #57A773 solid;
+}
 
 #init-list li{
     list-style: none;
-    border: 1px solid black;
 }
 #init-list .roll{
-    flex: 1;
+    flex: .5;
 }
 #init-list .name{
-    flex: 1;
+    flex: 2;
 }
 
-.conditions{
+.conditions1{
     text-align: left;
-    flex: 2;
-    display: grid;
+    flex: 1.5;
+}
+.conditions2{
+    text-align: left;
+    flex: 1.5;
 }
 
 select{
     flex: 1;
-    margin-left: 1%;
 }
 
-.remove-person{
+.util-btns button{
     flex: 1;
+    margin-bottom: 5%;
 }
 
 #active-card{
-    background-color: #574C50;
+    background-color: #4B4E58;
 }
 
 #control-bar{
+    background-color: #26272C;
+    border: #57A773 solid;
     position: sticky;
     display: flex;
     top: 0;
     left: 0;
     align-items: center;
     justify-content: space-between;
-    margin: 1em 0;
-    background-color: #39A77F;
 }
+
+button{
+    /* font-size: .6em; */
+    width: 80%;
+}
+
 
 #list-input{
     flex: 3;
-    margin: 0;
 }
 
-#list-input input{
-    padding: 3% 2.5%;
-    font-size: 1em;
+#list-input-name{
+    font-size: 2em;
+    width: 40%;
+}
+
+#list-input-number{
+    font-size: 2em;
+    width: 40%;
+}
+
+#list-input-btn{
+    font-size: 2em;
+    width: 10%;
 }
 
 #sort {
+    
     flex: 1;
 }
 
 #sort button{
-    padding: 9% 40%;
-    font-size: 1em;
+    font-size: 2em;
 }
 
 #clear{
@@ -100,18 +134,24 @@ select{
 }
 
 #clear button{
-    padding: 9% 30%;
-    font-size: 1em;
+    font-size: 2em;
 }
 #counter-div{
     flex: 1;
 }
 #counter-div button{
-    padding: 9% 25%;
-    font-size: 1em;
+    font-size: 2em;
 }
 #counter{
+    font-size: 2em;
     flex: .5;
-    color: white;
-    font-size: 1.5em;
+}
+
+.util-btns{
+    flex: 1;
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    margin-left: 1%;
 }

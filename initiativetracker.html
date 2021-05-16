@@ -11,12 +11,12 @@
 <body>
     <header id="top"><h1>Initiative Tracker</h1></header>
     <main>
-        <p>Please enter a name and a initiative roll! Note: This works better on tablets and laptops.</p>
+        <p>Please enter a name and an initiative roll! Note: This works better on tablets and laptops.</p>
         <div id="control-bar">
             <form id="list-input">
                 <input type="text" name="charName" id="list-input-name" placeholder="Name" maxlength="16">
                 <input type="number" name="initRoll" id="list-input-number" placeholder="Roll">
-                <input type="button" value="Add" onclick="addCharacter(charName.value,initRoll.value)">
+                <input type="button" value="Add" id="list-input-btn" onclick="addCharacter(charName.value,initRoll.value)">
             </form>
             <div id="sort">
                 <button onclick="sort()">Sort</button>
