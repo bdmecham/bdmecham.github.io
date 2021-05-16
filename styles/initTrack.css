@@ -34,8 +34,6 @@ body{
     text-align: center;
     background-color: #383A42;
     color: #DCE1E9;
-    margin: 0;
-    padding: none;
 }
 
 /* Player Cards */
@@ -79,6 +77,15 @@ select{
     flex: 1;
 }
 
+.util-btns{
+    flex: 1;
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content: space-evenly;
+    margin-left: 1%;
+}
+
 .util-btns button{
     flex: 1;
     margin-bottom: 5%;
@@ -109,55 +116,76 @@ button{
     flex: 3;
 }
 
-#list-input-name{
-    font-size: 2em;
-    width: 40%;
-}
-
-#list-input-number{
-    font-size: 2em;
-    width: 30%;
-}
-
-#list-input-btn{
-    font-size: 2em;
-    width: 20%;
-}
-
 #sort {
     flex: 1;
-}
-
-#sort button{
-    font-size: 2em;
-    width: 90%;
 }
 
 #clear{
     flex: 1;
 }
 
-#clear button{
-    font-size: 2em;
-    width: 90%;
-}
 #counter-div{
     flex: 1;
 }
-#counter-div button{
-    font-size: 2em;
-    width: 90%;
-}
-#counter{
-    font-size: 2em;
-    flex: .5;
+
+@media screen and (min-width: 1331px){
+    #list-input-name{
+        font-size: 2em;
+        width: 40%;
+    }
+    #list-input-number{
+        font-size: 2em;
+        width: 30%;
+    }
+    #list-input-btn{
+        font-size: 2em;
+        width: 20%;
+    }
+    #sort button{
+        font-size: 2em;
+        width: 90%;
+    }
+    #clear button{
+        font-size: 2em;
+        width: 90%;
+    }
+    #counter-div button{
+        font-size: 2em;
+        width: 90%;
+    }
+    #counter{
+        font-size: 2em;
+        flex: .5;
+    }
 }
 
-.util-btns{
-    flex: 1;
-    display: flex;
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content: space-evenly;
-    margin-left: 1%;
+@media screen and (max-width: 1330px){
+    #list-input-name{
+        font-size: 1.3em;
+        width: 40%;
+    }
+    #list-input-number{
+        font-size: 1.3em;
+        width: 20%;
+    }
+    #list-input-btn{
+        font-size: 1.3em;
+        width: 20%;
+    }
+    #sort button{
+        font-size: 1.3em;
+        width: 90%;
+    }
+    #clear button{
+        font-size: 1.3em;
+        width: 90%;
+    }
+    #counter-div button{
+        font-size: 1.3em;
+        width: 90%;
+    }
+    #counter{
+        font-size: 2em;
+        flex: .5;
+    }
 }
