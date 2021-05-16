@@ -133,7 +133,7 @@ function start(){
         b[0].setAttribute("id","active-card");
         count++;
         document.getElementById("counter").innerHTML = "Round: " + count;
-        document.getElementById("start").innerHTML = "Next Player";
+        document.getElementById("start").innerHTML = "Next";
     }
     else{
         list = document.getElementById("init-list");
