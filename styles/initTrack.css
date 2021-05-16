@@ -20,6 +20,8 @@ v CDD4E0
 57A773
 v 4D9366
 */
+
+/* General */
 h1{
     font-size: 2.2em;
 }
@@ -34,7 +36,7 @@ body{
     color: #DCE1E9;
 }
 
-
+/* Player Cards */
  .person-card{
     border-top: #57A773 solid;
     border-right: #57A773 solid;
@@ -84,6 +86,7 @@ select{
     background-color: #4B4E58;
 }
 
+/* Control Bar */
 #control-bar{
     background-color: #26272C;
     border: #57A773 solid;
@@ -99,7 +102,6 @@ button{
     /* font-size: .6em; */
     width: 80%;
 }
-
 
 #list-input{
     flex: 3;

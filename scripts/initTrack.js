@@ -66,6 +66,9 @@ function addCharacter(name, num) {
                             <input type="checkbox" name="unconscious" id="unconscious">
                             <label for="unconscious">Unconscious</label>
                         </li>
+                        <li>
+                        <input type="checkbox" name="concentration" id="concentration"> <label for="concentration">Concentration</label>
+                        </li>
                     </ul>
         <select name="exhaustion" id="exhaustion-levels">
             <option value="exhaustion0">No Exhaustion</option>
@@ -76,6 +79,7 @@ function addCharacter(name, num) {
             <option value="exhaustion5">Exhaustion 5</option>
             <option value="exhaustion6">Exhaustion 6</option>
         </select>
+        
         <div class="util-btns">
         <button id="remove${removeid}" onClick="removeCard(this.id)">
         Remove</button>
