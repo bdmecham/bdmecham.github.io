@@ -36,6 +36,17 @@ body{
     color: #DCE1E9;
 }
 
+main{
+    width: 75%;
+    float: right;
+}
+
+#notes{
+    width:15%;
+    float: left;
+    position: fixed;
+}
+
 /* Player Cards */
  .person-card{
     border-top: #57A773 solid;

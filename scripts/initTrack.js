@@ -79,7 +79,6 @@ function addCharacter(name, num) {
             <option value="exhaustion5">Exhaustion 5</option>
             <option value="exhaustion6">Exhaustion 6</option>
         </select>
-        
         <div class="util-btns">
         <button id="remove${removeid}" onClick="removeCard(this.id)">
         Remove</button>
