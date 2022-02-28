@@ -11,37 +11,48 @@ vlighter color: #496D83
 body{
     background-color: #433A3F;
     color: #FFEDDF;
+    margin: 0;
+    padding: 0;
 }
 header{
     font-size: 2em;
     text-align: center;
 }
 
-nav{
-    overflow: hidden;
+nav {
     background-color: #3D5A6C;
-    padding: 1% 0% 1% 0%;
-    font-size: 1.2em;
+    border: .1em solid black;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1.7em;
+    justify-content: space-between;
+    margin: auto;
+    padding: 1% 2%;
+    width: 60%;
 }
-nav a{
-    text-decoration: none;
+  
+.nav-itms{
+    border-style: dashed;
+    flex-grow: .5;
+    padding: 1%;
+    margin: 1%;
+    text-align: center;
     color: #FFEDDF;
-    padding: 2%;
+    text-decoration: none;
 }
 
-nav a:hover{
-   background-color: #334C5B;
+.nav-itms:hover {
+    border-style: solid;
+}
+  
+#active-page {
+    border-style: solid;
 }
 
 main{
     font-size: 1.13em;
     max-width: 80;
     align-content: center;
-}
-
-.active{
-    background-color: #496D83;
-    pointer-events: none;
 }
 
 #projects-intro{
