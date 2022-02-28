@@ -1,101 +1,87 @@
+// Changes the color of the conditions to activate/deactivate them.
+function changeColor(element){
+    
+    if(element.className == 'condition-option-active'){
+      element.className = "condition-option";
+    }
+    else{
+      element.className = "condition-option-active";
+    }
+}
+
 let removeid = 0;
 // This creates a card this is sortable by the number!
 function addCharacter(name, num) {
     var newli = document.createElement("li");
     if(name != "" && num != ""){
-        newli.className = `person-card`;
+        newli.className = `entry-container`;
         newli.setAttribute('draggable', true);
-        newli.innerHTML = `<div class="roll" >${num}</div>
-        <div class="name">${name}</div>
-        <ul class="conditions1">
-                        <li>
-                            <input type="checkbox" name="blinded" id="blinded">
-                            <label for="blinded">Blinded</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="charmed" id="charmed">
-                            <label for="charmed">Charmed</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="deafened" id="deafened">
-                            <label for="deafened">Deafened</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="frightened" id="frightened">
-                            <label for="frightened">Frightened</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="grappled" id="grappled">
-                            <label for="grappled">Grappled</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="incapacitated" id="incapacitated">
-                            <label for="incapacitated">Incapacitated</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="invisible" id="invisible">
-                            <label for="invisible">Invisible</label>
-                        </li>
-                    </ul>
-                    <ul class="conditions2">
-                        <li>
-                            <input type="checkbox" name="paralyzed" id="paralyzed">
-                            <label for="paralyzed">Paralyzed</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="petrified" id="petrified">
-                            <label for="petrified">Petrified</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="poisoned" id="poisoned">
-                            <label for="poisoned">Poisoned</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="prone" id="prone">
-                            <label for="prone">Prone</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="restrained" id="restrained">
-                            <label for="restrained">Restrained</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="stunned" id="stunned">
-                            <label for="stunned">Stunned</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="unconscious" id="unconscious">
-                            <label for="unconscious">Unconscious</label>
-                        </li>
-                        <li>
-                        <input type="checkbox" name="concentration" id="concentration"> <label for="concentration">Concentration</label>
-                        </li>
-                    </ul>
-        <select name="exhaustion" id="exhaustion-levels">
-            <option value="exhaustion0">No Exhaustion</option>
-            <option value="exhaustion1">Exhaustion 1</option>
-            <option value="exhaustion2">Exhaustion 2</option>
-            <option value="exhaustion3">Exhaustion 3</option>
-            <option value="exhaustion4">Exhaustion 4</option>
-            <option value="exhaustion5">Exhaustion 5</option>
-            <option value="exhaustion6">Exhaustion 6</option>
-        </select>
-        <div class="util-btns">
-        <button id="remove${removeid}" onClick="removeCard(this.id)">
-        Remove</button>
-        <button id="down${removeid}" class="card-down" onCLick="moveCardDown(this.id)">Down</button>
-        </div>
+        newli.innerHTML = `<div class="entry-roll">${num}</div>
+        <div class="entry-name">${name}</div>
+        <div class="conditions">
+            <span class="condition-option" onclick="changeColor(this)">Blinded</span>
+            <span class="condition-option" onclick="changeColor(this)">Deafened </span>
+            <span class="condition-option" onclick="changeColor(this)">Charmed</span>
+            <span class="condition-option" onclick="changeColor(this)">Frightened</span>
+            <span class="condition-option" onclick="changeColor(this)">Poisoned</span>
+            <span class="condition-option" onclick="changeColor(this)">Stunned</span>
+            <span class="condition-option" onclick="changeColor(this)">Paralyzed</span>
+            <span class="condition-option" onclick="changeColor(this)">Petrified</span>
+            <span class="condition-option" onclick="changeColor(this)">Prone</span>
+            <span class="condition-option" onclick="changeColor(this)">Grappled</span>
+            <span class="condition-option" onclick="changeColor(this)">Restrained</span>
+            <span class="condition-option" onclick="changeColor(this)">Incapacitated</span>
+            <span class="condition-option" onclick="changeColor(this)">Unconscious</span>
+            <span class="condition-option" onclick="changeColor(this)">Invisible</span>
+            <span class="condition-option" onclick="changeColor(this)">Concentration</span>
+            <select class="condition-option" name="exhaustion" id="exhaustion-levels">
+                <option value="exhaustion0">Exhaustion</option>
+                <option value="exhaustion1">Level 1</option>
+                <option value="exhaustion2">Level 2</option>
+                <option value="exhaustion3">Level 3</option>
+                <option value="exhaustion4">Level 4</option>
+                <option value="exhaustion5">Level 5</option>
+                <option value="exhaustion6">Level 6</option>
+            </select>
+      </div>
+      <div class="entry-btns">
+        <div class="entry-btns-util">^</div>
+        <div id="remove${removeid}" onClick="removeCard(this.id)" class="entry-btns-util">X</div>
+        <div id="down${removeid}" onCLick="moveCardDown(this.id)" class="card-down entry-btns-util">v</div>
+      </div>
         `;
 
-      document.getElementById("init-list").appendChild(newli);
+    document.getElementById("init-list").appendChild(newli);
 
-      document.getElementById("list-input").reset();
-      removeid++;
+    document.getElementById("list-input").reset();
+    removeid++;
     }
     
 }
 
+// Remove a card from initiative count
+function removeCard(id) {
+
+    if(document.getElementById(id).closest('li').id == "active-card"){
+        start();
+    }
+    document.getElementById('init-list').removeChild(document.getElementById(id).closest('li'));
+}
 
 
+// Move card down in the list to make adjustments
+function moveCardDown(id) {
+    var list, i, switched, b;
+    switched = false;
+    list = document.getElementById("init-list");
+    b = list.getElementsByClassName("entry-container");
+    for (i = 0; i < (b.length - 1); i++) {
+        if(b[i] === document.getElementById(id).closest('li') && switched === false){
+            b[i].parentNode.insertBefore(b[i + 1], b[i]);
+            switched = true;
+        }
+    }
+}
 
 // Sort Function
 function sort() {
@@ -104,10 +90,10 @@ function sort() {
     switching = true;
     while (switching) {
         switching = false;
-        b = list.getElementsByClassName("person-card");
+        b = list.getElementsByClassName("entry-container");
         for (i = 0; i < (b.length - 1); i++) {
         shouldSwitch = false;
-        if (parseInt(b[i].getElementsByClassName("roll")[0].innerHTML) < parseInt(b[i+1].getElementsByClassName("roll")[0].innerHTML)) {
+        if (parseInt(b[i].getElementsByClassName("entry-roll")[0].innerHTML) < parseInt(b[i+1].getElementsByClassName("entry-roll")[0].innerHTML)) {
             shouldSwitch = true;
             break;
         }
@@ -120,23 +106,22 @@ function sort() {
 }
 
 // Advance Round Counter
-
 /*This gets the round number and checks if its zero. if so it starts the initiative, if not it goes through and finds who's active, and then makes the next person in line active. If it is the end of the round it advances the counter and starts over.*/
 function start(){
     var currentlyActive, round, count, list, b;
-    round = document.getElementById("counter").innerHTML;
+    round = document.getElementById("toolbar-counter").innerHTML;
     count = parseInt(round.replace("Round: ", ""));
     if(count === 0){
         list = document.getElementById("init-list");
-        b = list.getElementsByClassName("person-card");
+        b = list.getElementsByClassName("entry-container");
         b[0].setAttribute("id","active-card");
         count++;
-        document.getElementById("counter").innerHTML = "Round: " + count;
-        document.getElementById("start").innerHTML = "Next";
+        document.getElementById("toolbar-counter").innerHTML = "Round: " + count;
+        document.getElementById("toolbar-start").innerHTML = "Next";
     }
     else{
         list = document.getElementById("init-list");
-        b = list.getElementsByClassName("person-card");
+        b = list.getElementsByClassName("entry-container");
         for (var i = 0; i < (b.length); i++) {
             if(b[i].id == "active-card"){
                 currentlyActive = i;
@@ -146,7 +131,7 @@ function start(){
             b[currentlyActive].removeAttribute("id");
             b[0].setAttribute("id","active-card");
             count++;
-            document.getElementById("counter").innerHTML = "Round: " + count;
+            document.getElementById("toolbar-counter").innerHTML = "Round: " + count;
             
         }
         else{
@@ -158,41 +143,22 @@ function start(){
     
 }
 
+// This adjusts the round count element.
 function nextRound() {
-  var round = document.getElementById("counter").innerHTML;
+  var round = document.getElementById("toolbar-counter").innerHTML;
   var count = parseInt(round.replace("Round: ", ""));
   count++;
-  document.getElementById("counter").innerHTML = "Round: " + count;
+  document.getElementById("toolbar-counter").innerHTML = "Round: " + count;
 }
 
+// Clears & Resets the tracker.
 function clearAll() {
   list = document.getElementById("init-list").innerHTML = "";
 
-  var round = document.getElementById("counter").innerHTML;
+  var round = document.getElementById("toolbar-counter").innerHTML;
   var count = parseInt(round.replace("Round: ", ""));
   count = 0;
-  document.getElementById("counter").innerHTML = "Round: " + count;
-  document.getElementById("start").innerHTML = "Start";
+  document.getElementById("toolbar-counter").innerHTML = "Round: " + count;
+  document.getElementById("toolbar-start").innerHTML = "Start";
   removeid = 0;
-}
-
-function removeCard(id) {
-
-    if(document.getElementById(id).closest('li').id == "active-card"){
-        start();
-    }
-    document.getElementById('init-list').removeChild(document.getElementById(id).closest('li'));
-}
-
-function moveCardDown(id) {
-    var list, i, switched, b;
-    switched = false;
-    list = document.getElementById("init-list");
-    b = list.getElementsByClassName("person-card");
-    for (i = 0; i < (b.length - 1); i++) {
-        if(b[i] === document.getElementById(id).closest('li') && switched === false){
-            b[i].parentNode.insertBefore(b[i + 1], b[i]);
-            switched = true;
-        }
-    }
 }

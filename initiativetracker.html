@@ -4,45 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/tracker.css">
+    <script src="../script/tracker.js"></script>
     <title>Initiative Tracker</title>
-    <!-- <link rel="stylesheet" href="styles/style.css"> -->
-    <link rel="stylesheet" href="styles/initTrack.css">
-    <script src="scripts/initTrack.js"></script>
 </head>
 <body>
+    <header>Initiative Tracker</header>
+    <div class="tool-bar">
+        <!-- Name, Roll, (Autoroll in the future?), Sort, Clear, Start, Round # -->
+        <form id="list-input">
+            <label for="name" class="list-input-item">Name:</label>
+            <input type="text" name="name" id="nameinp" placeholder="Name" class="list-input-item">
 
-    <div id="notes">
-        <textarea name="notes" rows="40" cols="45" placeholder="Notes..." style="resize: none"></textarea>
-    </div>
-    <main>
-        <header id="top"><h1>Initiative Tracker</h1></header>
-        <p>Please enter names and rolls when everyone has been added, press "Sort", then "Start! Note: This works better on laptops for the time being.</p>
+            <label for="roll">Roll:</label>
+            <input type="number" name="roll" id="rollinp" placeholder="Roll" class="list-input-item">
 
-        <div>
-            <ul id="init-list">
-            </ul>
-        </div>
-
-        <div id="control-bar">
-            <form id="list-input">
-                <input type="text" name="charName" id="list-input-name" placeholder="Name" maxlength="24">
-                <input type="number" name="initRoll" id="list-input-number" placeholder="Roll">
-                <input type="button" value="Add" id="list-input-btn" onclick="addCharacter(charName.value,initRoll.value)">
-            </form>
-            <div id="sort">
-                <button onclick="sort()">Sort</button>
-            </div>
-            <div id="clear">
-                <button onclick="clearAll()">Clear</button>
-            </div>
-            
-            <div id="counter-div">
-                <button id="start" onclick="start()">Start</button>
-            </div>
-            <div id="counter">Round: 0</div>
-        </div>
+            <span onclick="addCharacter(nameinp.value,rollinp.value)" class="toolbar-btn class="list-input-item"" >Add</span>
+        </form>
         
-    </main>
-    
+        <span onclick="clearAll()"class="toolbar-btn">Clear</span>
+        <span onclick="sort()" class="toolbar-btn">Sort</span>
+        <span onclick="start()" id="toolbar-start" class="toolbar-btn">Start</span>
+        <span " id="toolbar-counter" class="toolbar-counter">Round: 0</span>
+    </div>
+    <div class="tracker-screen">
+        <ul id="init-list">
+        </ul>
+        
+        
+
+    </div>
+    <div contenteditable="true" class="notes-screen">
+        Write Notes Here (ctrl/cmd+b, ctrl/cmd+i, ctrl/cmd+u work).
+    </div>
+    <footer>
+        <span> <a href="../index.html">Home</a></span>
+        <span>| Download tracker</span>
+        <span>| Upload tracker</span>
+        <span>| Download Notes</span>
+    </footer>
 </body>
 </html>
